@@ -1,10 +1,17 @@
 package com.estudo.curso.entities;
 
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.web.WebProperties;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
