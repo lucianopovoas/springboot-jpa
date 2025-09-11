@@ -1,0 +1,8 @@
+package com.estudo.curso.services.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException{
+
+    public ResourceNotFoundException(Object id) {
+        super("Resource Not Found ID: " + id);
+    }
+}
